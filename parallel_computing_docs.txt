@@ -1,0 +1,46 @@
+PARALLEL AND DISTRIBUTED COMPUTING CONCEPTS
+
+1. PARALLEL COMPUTING
+Parallel computing involves performing multiple calculations simultaneously using multiple processing elements. It's used to solve large, complex problems faster.
+
+2. DISTRIBUTED COMPUTING
+Distributed computing involves multiple computers working together on a single problem, often geographically separated and connected via a network.
+
+3. KEY CONCEPTS
+- Speedup: Ratio of sequential execution time to parallel execution time
+- Efficiency: Speedup divided by number of processors
+- Amdahl's Law: Theoretical limit on speedup from parallelization
+- Flynn's Taxonomy: Classifies computer architectures (SISD, SIMD, MISD, MIMD)
+
+4. PARALLEL ARCHITECTURES
+- Shared Memory: All processors access same memory (UMA, NUMA)
+- Distributed Memory: Each processor has its own memory
+- Hybrid: Combination of both
+
+5. PROGRAMMING MODELS
+- MPI (Message Passing Interface): For distributed memory systems
+- OpenMP: For shared memory systems
+- CUDA: For GPU programming
+- MapReduce: For large-scale data processing
+
+6. SYNCHRONIZATION
+- Locks: Mutual exclusion
+- Barriers: Synchronization point
+- Semaphores: Signaling mechanism
+
+7. LOAD BALANCING
+Techniques to distribute work evenly among processors:
+- Static: Determined before execution
+- Dynamic: Adjusted during execution
+
+8. FAULT TOLERANCE
+Strategies to handle failures in distributed systems:
+- Checkpointing
+- Replication
+- Consensus algorithms
+
+9. REAL-WORLD APPLICATIONS
+- Scientific simulations
+- Big data processing
+- Machine learning training
+- Web search engines

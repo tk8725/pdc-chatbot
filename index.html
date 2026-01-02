@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallel Computing AI Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Quick fixes if CSS doesn't load */
+        .hidden { display: none !important; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-robot"></i>
+                <h1>Parallel Computing AI Assistant</h1>
+            </div>
+            <p class="subtitle">Ask questions about parallel and distributed computing concepts</p>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="info-section">
+                    <h3><i class="fas fa-info-circle"></i> About This Assistant</h3>
+                    <p>This AI assistant specializes in Parallel and Distributed Computing. It uses RAG (Retrieval-Augmented Generation) to provide accurate answers based on course materials.</p>
+                </div>
+
+                <div class="info-section">
+                    <h3><i class="fas fa-book"></i> Topics Covered</h3>
+                    <div class="topics-grid">
+                        <div class="topic-chip" onclick="askTopic('Parallel Computing')">Parallel Computing</div>
+                        <div class="topic-chip" onclick="askTopic('Distributed Systems')">Distributed Systems</div>
+                        <div class="topic-chip" onclick="askTopic('MPI')">MPI</div>
+                        <div class="topic-chip" onclick="askTopic('OpenMP')">OpenMP</div>
+                        <div class="topic-chip" onclick="askTopic('CUDA')">CUDA</div>
+                        <div class="topic-chip" onclick="askTopic('GPU Programming')">GPU Programming</div>
+                        <div class="topic-chip" onclick="askTopic('Load Balancing')">Load Balancing</div>
+                        <div class="topic-chip" onclick="askTopic('Synchronization')">Synchronization</div>
+                        <div class="topic-chip" onclick="askTopic('Amdahl Law')">Amdahl's Law</div>
+                        <div class="topic-chip" onclick="askTopic('MapReduce')">MapReduce</div>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h3><i class="fas fa-lightbulb"></i> Quick Questions</h3>
+                    <div class="quick-questions">
+                        <button class="quick-btn" onclick="askQuestion('What is parallel computing?')">
+                            What is parallel computing?
+                        </button>
+                        <button class="quick-btn" onclick="askQuestion('Explain Amdahl\'s Law')">
+                            Explain Amdahl's Law
+                        </button>
+                        <button class="quick-btn" onclick="askQuestion('What is MPI vs OpenMP?')">
+                            What is MPI vs OpenMP?
+                        </button>
+                        <button class="quick-btn" onclick="askQuestion('What is CUDA used for?')">
+                            What is CUDA used for?
+                        </button>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Chat Container -->
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h2><i class="fas fa-comments"></i> Chat Assistant</h2>
+                    <div class="status-indicator">
+                        <div class="status-dot"></div>
+                        <span id="statusText">Checking connection...</span>
+                    </div>
+                </div>
+
+                <!-- Web Search Toggle -->
+                <div class="web-search-toggle">
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="webSearchToggle">
+                        <span class="toggle-slider"></span>
+                    </label>
+                    <span class="toggle-label">Enable Web Search</span>
+                    <span class="search-indicator" id="searchIndicator" style="display: none;">
+                        <i class="fas fa-globe"></i> Web Search
+                    </span>
+                </div>
+
+                <!-- Chat Messages -->
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Messages will appear here -->
+                </div>
+
+                <!-- Input Area -->
+                <div class="input-area">
+                    <div class="input-container">
+                        <textarea 
+                            id="userInput" 
+                            placeholder="Type your question about parallel computing..."
+                            rows="1"></textarea>
+                        <button id="sendButton">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div class="input-hint">
+                        <small>Press Enter to send • Shift+Enter for new line</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Parallel & Distributed Computing Course Project | RAG-based AI Assistant | Backend: Flask + LangChain</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
