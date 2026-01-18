@@ -444,4 +444,5 @@ if __name__ == '__main__':
     print(" Press Ctrl+C to stop")
     print(f" Knowledge base: {len(chatbot_instance.knowledge_base)} topics")
     print("✅ Ready to answer questions!\n")
-    app.run(host='0.0.0.0', port=port, debug=True)
+
+    app.run(host='0.0.0.0', port=port, debug=False, use_reloader=False)
