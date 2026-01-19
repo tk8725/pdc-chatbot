@@ -1,7 +1,7 @@
-# pdc-chatbot
+# Persnal Assistant
 
 # project structure
-pdc-ccp/ (or parallel-computing-chatbot/)
+ccp/ (-chatbot/)
 ├── backend/
 │   ├── app.py
 │   ├── rag_system.py
